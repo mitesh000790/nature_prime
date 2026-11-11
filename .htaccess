@@ -1,0 +1,14 @@
+# Nature's Prime - Apache rules
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Old static pages -> new PHP page (301, so bookmarks, links and search engines follow).
+    #   index_ch.html?lang=zh  ->  ./?lang=zh
+    #   index.html?lang=en     ->  ./?lang=en
+    RewriteCond %{REQUEST_URI} ^(.*/)index_ch\.html$
+    RewriteRule ^index_ch\.html$ %1?lang=zh [R=301,L]
+
+    RewriteCond %{REQUEST_URI} ^(.*/)index\.html$
+    RewriteRule ^index\.html$ %1 [R=301,L]
+</IfModule>

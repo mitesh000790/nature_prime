@@ -1,0 +1,235 @@
+/* Nature's Prime - site styles (shared by the English and Chinese pages) */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* ---------- Header ---------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #fff;
+    color: #fff;
+}
+
+.header__logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo {
+    height: 50px;
+}
+
+.language_translater {
+    font-weight: 200;
+}
+
+.header a {
+    color: #333;
+    text-decoration: none;
+}
+
+.heading {
+    color: #34426c;
+}
+
+/* ---------- Banner ---------- */
+.ban_sec {
+    width: 100%;
+}
+
+.ban_img {
+    width: 100%;
+    position: relative;
+}
+
+.ban_img img {
+    width: 100%;
+}
+
+.ban_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+.ban_text strong {
+    font-size: 44px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px black;
+}
+
+/* ---------- Promise section background with leaves ---------- */
+.background-images {
+    position: relative;
+    background: url('../ligtBG.png');
+    background-size: contain;
+}
+
+.background-images::before,
+.background-images::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.background-images::before {
+    background-image: url('../640220893a01cb15d166e170_leaf.png');
+    top: 5px;
+    right: 10px;
+    transform: rotate(180deg);
+}
+
+.background-images::after {
+    background-image: url('../64022089171997b03d48ff29_leaf2.png');
+    bottom: 5px;
+    left: 10px;
+}
+
+/* ---------- Content ---------- */
+.contentImages {
+    height: 350px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.image-container img {
+    max-width: 100%;
+    margin-right: 10px;
+}
+
+p {
+    color: #333 !important;
+}
+
+/* ---------- Footer ---------- */
+.footerBg {
+    background: url('../footerBg.png');
+}
+
+footer h6 {
+    color: #fff;
+}
+
+.white-fonts {
+    color: #fff !important;
+    font-weight: lighter;
+}
+
+.copyright {
+    font-size: 12px;
+}
+
+.logoHide {
+    display: none;
+}
+
+/* ---------- Banner text sizes ---------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .ban_text strong {
+        font-size: 40px;
+        line-height: 45px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .ban_text strong {
+        font-size: 35px;
+        line-height: 40px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .ban_img img {
+        min-height: 290px;
+        object-fit: cover;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .ban_text strong {
+        padding: 10px;
+        width: 100%;
+        display: block;
+        letter-spacing: 2px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .ban_text strong {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 2px;
+    }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .header__logo-container {
+        margin: 10px 0;
+    }
+
+    .image-container {
+        flex-wrap: wrap !important;
+        justify-content: space-around;
+    }
+
+    .image-container img {
+        height: 70px !important;
+        width: 140px !important;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .contentImages {
+        height: 200px;
+    }
+
+    .centerLogoHide {
+        display: none;
+    }
+
+    .logoHide {
+        display: block;
+    }
+
+    .mt15 {
+        margin-top: 15px;
+    }
+
+    .p10 {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 600px) {
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
